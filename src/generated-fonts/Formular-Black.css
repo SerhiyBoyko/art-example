@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Formular";
+    src: url("Formular-Black.eot"); /* IE9 */
+    src: url("Formular-Black.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Formular-Black.woff") format("woff"), /* chrome, firefox */
+    url("Formular-Black.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("Formular-Black.svg#Formular") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+

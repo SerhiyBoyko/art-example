@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Rubik";
+    src: url("Rubik-Bold.eot"); /* IE9 */
+    src: url("Rubik-Bold.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    url("Rubik-Bold.woff") format("woff"), /* chrome, firefox */
+    url("Rubik-Bold.ttf") format("truetype"), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+    url("Rubik-Bold.svg#Rubik") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
