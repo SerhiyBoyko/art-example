@@ -1,0 +1,81 @@
+a{
+	@media $d{
+	&{
+		cursor:none!important;
+	}}
+}
+body{
+	@media $d{
+	&{
+		cursor:none!important;
+	}}
+}
+
+.cursor-wrapper {
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	overflow: hidden;
+	z-index: 10000;
+	pointer-events: none;
+	@media $m,$t{
+	&{
+		display: none!important;
+	}}
+
+}
+
+.cursor{
+	display: block;
+	position: absolute;
+	margin-top: -24px;
+	margin-left: -24px;
+	width: 48px;
+	height: 48px;
+	z-index: 10000;
+	border-radius: 50%;
+	@include flex-center;
+	pointer-events:none;
+	@media $m,$t{
+	&{
+		display:none!important;
+	}}
+	.cursor-circle {
+		+size:12px 12px;
+		display: block;
+		position: relative;
+		background-color:$red;
+		border-radius: 50%;
+		transition:width .15s ease,height .15s ease,background-color .15s ease;
+	}
+
+	&.cursor-wide-white,
+	&.cursor-wide{
+		.cursor-circle{
+			+size:48px 48px;
+			background-color:rgba($red,.3);
+		}
+	}
+	&.cursor-wide{
+		.cursor-circle{
+			background-color:rgba($red,.3);
+		}
+	}
+	&.cursor-wide-white{
+		.cursor-circle{
+			background-color:rgba(#fff,.3);
+		}
+	}
+	&.cursor-white{
+		.cursor-circle{
+			background-color:rgba(#fff,.3);
+		}
+	}
+
+	&.hide-cursor{
+		opacity:0;
+	}
+}
+

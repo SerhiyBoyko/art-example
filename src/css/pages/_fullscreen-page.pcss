@@ -1,0 +1,343 @@
+
+
+.fullscreen-page{
+	min-height:100%;
+	height:100%;
+	width: 100%;
+	position: relative;
+	@media $m{
+	&{
+		overflow:hidden;
+		box-sizing:border-box;
+		min-height:510px;
+	}}
+	&.auto-h{
+		min-height:auto;
+		height:auto;
+	}
+	.logo-art{
+		&:not(.min){
+			position: absolute ;
+			top: 40px;
+			left: 60px;
+			z-index: 1;
+		}
+	}
+	.video-wrapper{
+		position: absolute 0;
+		overflow:hidden;
+		background-color: rgba(51,51,51,.3);
+		.video-img{
+			@include bg(cover);
+		}
+		.video-box{
+			+size:100% 100%;
+			position: relative;
+			.img{
+				position: absolute 0;
+				@include bg(cover);
+			}
+		}
+		.video{
+			height:100%;
+			video{
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translateX(-50%) translateY(-50%);
+				transform: translateX(-50%) translateY(-50%);
+				min-width: 100%;
+				min-height: 100%;
+				width: auto;
+				height: auto;
+				z-index: -1000;
+				overflow: hidden;
+			}
+		}
+		.video-img,
+		video{
+			display:block;
+			margin:auto;
+			width:100%;
+			height:100%;
+			position:relative;
+			z-index:-1;
+			object-fit:cover;
+		}
+	}
+	.btn-close{
+		position: absolute;
+		top: 0;
+		right: 0;
+		z-index: 1;
+	}
+
+	.select-line{
+		display: flex;
+		align-items:center;
+		.descr{
+			margin: auto;
+		}
+	}
+}
+.fullscreen-footer{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	box-sizing:border-box;
+	@media $m{
+	&{
+		padding-bottom: 20px;
+	}}
+	@media $t,$d{
+	&{
+		padding-bottom: 4.5vh;
+	}}
+
+	.sub-title{
+		color: #fff;
+		@include h1;
+		@media $m{
+		&{
+			font-size: 9px;
+		}}
+	}
+
+}
+.control-box{
+	position: absolute;
+	z-index: 4;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	width: auto;
+	.arrow-container{
+		@media $m,$t{
+		&{
+			border-top:2px solid #fff;
+
+		}}
+	}
+}
+.arrow-container{
+	margin: 0 auto;
+	display: flex;
+	justify-content:space-between;
+	box-sizing:border-box;
+	@media $m{
+	&{
+		padding-top: 12px;
+		position: relative;
+	}}
+	@media $t{
+	&{
+		width: 100%;
+		padding: 20px 25px 0;
+		position: relative;
+	}}
+	@media $d{
+	&{
+		width:93vw;
+	}}
+
+
+}
+
+
+
+.container-page{
+	height: 100%;
+	display: flex;
+	position: relative;
+	flex-direction:column;
+	justify-content:center;
+	color: #fff;
+
+
+	.feedback{
+		.line{
+			margin-bottom: 20px;
+			display: flex;
+			@media $m{
+			&{
+				flex-direction:column;
+			}}
+			@media $t,$d{
+			&{
+				align-items:center;
+			}}
+			.link{
+				@media $m{
+				&{
+					margin-bottom: 10px;
+				}}
+				@media $t,$d{
+				&{
+					display: inline-flex;
+					align-items:center;
+				}}
+				&:not(:last-of-type){
+					&:after{
+						content:'';
+						+size:1px 10px;
+						background-color: rgba(#fff,.5);
+						margin: 0 15px;
+						@media $m{
+						&{
+							display: none;
+						}}
+					}
+				}
+			}
+		}
+	}
+	&.container-page-square{
+		color: $black;
+		@media $m{
+		&{
+			padding-top: 108px;
+		}}
+		@media $m,$t{
+		&{
+			box-sizing:border-box;
+			padding-top: 108px;
+			padding-bottom: 35px;
+		}}
+		@media $t{
+		&{
+			box-sizing:border-box;
+			padding-top: 148px;
+			padding-bottom: 35px;
+		}}
+		@media $d{
+		&{
+			min-height:480px;
+		}}
+		.title{
+			@media $m{
+			&{
+				margin-bottom: 10px;
+			}}
+			@media $t{
+			&{
+				margin-bottom: 20px;
+			}}
+			@media $d{
+			&{
+				margin-bottom: 20vh;
+			}}
+		}
+	}
+	&.container-page-construction{
+		.title{
+			margin-bottom: 25vh;
+		}
+	}
+}
+
+.title-box{
+	max-width:800px;
+	box-sizing:border-box;
+	padding-right: 20px;
+	@media $t,$d{
+	&{
+		position: relative;
+	}}
+
+	&.title-box-wide{
+		max-width:840px;
+	}
+	.title-descr{
+		@media $m{
+		&{
+		}}
+	}
+	.title-descr,
+	h1{
+		@include h1;
+		@media $m{
+		&{
+			margin-bottom: 11px;
+			font-size: 9px;
+		}}
+		@media $t{
+		&{
+			font-size: 11px;
+		}}
+		@media $t,$d{
+		&{
+			position: absolute;
+			top: -40px;
+			left: 0;
+		}}
+	}
+
+	.title{
+		font-weight: $f_bold;
+		@include font-height(22,48,65);
+	}
+	.title-top-content{
+		box-sizing:border-box;
+		@media $m{
+		&{
+			margin-bottom: 40px;
+			padding-right: 0px;
+			max-width:400px;
+		}}
+		@media $t{
+		&{
+			margin-bottom: 65px;
+		}}
+		@media $d{
+		&{
+			@include m-b(100vh);
+		}}
+	}
+	.block{
+		&:not(:last-of-type){
+			@media $m{
+			&{
+				margin-bottom: 30px;
+			}}
+			@media $t{
+			&{
+				margin-bottom: 40px;
+			}}
+			@media $d{
+			&{
+				@include m-b(40vh);
+			}}
+		}
+		.link{
+			display: inline-block;
+			@media $m{
+			&{
+				margin-bottom: 10px;
+			}}
+			@media $t{
+			&{
+				margin-bottom: 15px;
+			}}
+			@media $d{
+			&{
+				margin-bottom: 15px;
+			}}
+		}
+	}
+
+	&.title-box-top{
+		.title{
+
+			box-sizing:border-box;
+			@include p-b(60vh);
+		}
+	}
+}
+.squares-page{
+	@media $m,$t{
+	&{
+		height: auto;
+		min-height: auto;
+	}}
+}

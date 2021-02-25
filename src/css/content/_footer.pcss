@@ -1,0 +1,114 @@
+footer{
+	position: relative;
+	box-sizing:border-box;
+	@media $m{
+	&{
+		padding-top: 45px;
+		padding-bottom: 45px;
+	}}
+	@media $t{
+	&{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}}
+	@media $d{
+	&{
+		@include p-h(100vh);
+	}}
+
+	.logo-art{
+		width: 13vw;
+		margin: 0 auto;
+		display: block;
+		@media $m{
+		&{
+			min-width:130px;
+		}}
+		@media $t{
+		&{
+			min-width:130px;
+		}}
+		@media $d{
+		&{
+			min-width:200px;
+		}}
+	}
+	.box{
+		text-align: center;
+		margin: 0 auto;
+		.link{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			display: inline-block;
+		}
+	}
+	.box-row{
+		max-width:1600px;
+		margin-left: auto;
+		margin-right: auto;
+		@media $m{
+		&{
+		}}
+	}
+	.box-row,
+	ul{
+		display: flex;
+		width: 100%;
+		justify-content:center;
+		@media $m{
+		&{
+			margin-top: 30px;
+		}}
+		@media $t{
+		&{
+			margin-top: 50px;
+		}}
+		@media $d{
+		&{
+			@include m-t(50vh);
+		}}
+	}
+	ul{
+		li{
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+				margin: 0 25px;
+			}}
+			&:not(:last-of-type){
+
+			}
+		}
+	}
+	.descr-list{
+		@media $m{
+		&{
+			flex-direction:column;
+			text-align: center;
+		}}
+		.descr-link{
+			@media $m{
+			&{
+				font-size: 11px;
+			}}
+		}
+		li:not(:first-of-type){
+			@media $m{
+			&{
+				margin-bottom: 7px;
+			}}
+		}
+		li:first-of-type{
+			@media $m{
+			&{
+				margin-top: 15px;
+				display: flex;
+				order:3;
+				width: 100%;
+				justify-content:center;
+			}}
+		}
+	}
+}

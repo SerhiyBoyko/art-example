@@ -1,0 +1,260 @@
+.reserve-m{
+	@media $m{
+	&{
+		flex-direction:column-reverse;
+	}}
+}
+.side-title,
+.col-500{
+	@media $m{
+	&{
+	}}
+	@media $t{
+	&{
+	}}
+	@media $d{
+	&{
+		width: 31vw;
+		min-width:496px;
+	}}
+}
+
+.col-780{
+	width: 47vw;
+	max-width:780px;
+	@media $m{
+	&{
+	}}
+	@media $t{
+	&{
+	}}
+	@media $d{
+	&{
+	}}
+}
+.col-720{
+	@media $m{
+	&{
+	}}
+	@media $t{
+	&{
+	}}
+	@media $d{
+	&{
+		width: 45vw;
+		max-width:720px;
+	}}
+}
+.row-grid{
+	width: 100%;
+	display: flex;
+	@media $m{
+	&{
+		flex-direction:column;
+		position: relative;
+	}}
+	@media $t,$d{
+	&{
+	}}
+	&.order-1{
+		@media $m{
+		&{
+			order:1;
+		}}
+	}
+	&.order-2{
+		@media $m{
+		&{
+			order:2;
+		}}
+	}
+	&.order-3{
+		@media $m{
+		&{
+			order:3;
+		}}
+	}
+	.g{
+		display: flex;
+		flex-wrap:wrap;
+		@include bg(cover);
+		position: relative;
+		@media $t,$d{
+		&{
+			outline:25px solid #E5E5E5;
+		}}
+		&.g-logo-box{
+			@media $m{
+			&{
+				justify-content:flex-end;
+				position: absolute;
+				top: 0;
+				right: 20px;
+			}}
+		}
+		.logo{
+			@media $m{
+			&{
+				width: 70px;
+			}}
+			@media $t,$d{
+			&{
+				width: 80px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform:translate(-50%, -50%);
+			}}
+
+		}
+
+		&.bg-white{
+			background-color: #fff;
+		}
+
+		&.g-2{
+			@media $m{
+			&{
+				width: 100%;
+			}}
+			@media $t,$d{
+			&{
+				width: 50%;
+			}}
+		}
+		&.single{
+			@media $m{
+			&{
+				padding-top: 100%;
+			}}
+		}
+		&.g-4{
+			width: 50%;
+			padding-top: 50%;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+
+		&.g-wide-500{
+			width: 100%;
+			padding-top: 60%;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+		&.g-4-220{
+			width: 50%;
+			padding-top: 30%;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+		&.g-4-100{
+			width: 100%;
+			padding-top: 60%;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+		&.g-4-200{
+			width: 100%;
+			padding-top: 120%;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+		&.g-4-500{
+			width: 50%;
+			padding-top: 65%;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+		&.column{
+			flex-direction:column;
+			padding-top: 0;
+			@media $m{
+			&{
+			}}
+			@media $t,$d{
+			&{
+			}}
+		}
+	}
+	.g-logo{
+		background-color: #fff;
+		@media $m{
+		&{
+			+size:90px 90px;
+			@include flex-center;
+		}}
+		@media $t,$d{
+		&{
+			margin-left: calc(12.5% + 50px);
+			align-self:baseline;
+			width: 25%;
+			padding-top: 25%;
+			min-width:100px;
+		}}
+	}
+	.text-box{
+		box-sizing:border-box;
+		@media $m{
+		&{
+			margin-bottom: 30px;
+		}}
+		@media $t,$d{
+		&{
+			padding-left: 25px;
+			@include m-b(100vh);
+		}}
+
+		.top-box{
+			@media $m{
+			&{
+				box-sizing:border-box;
+				padding-right: 100px;
+				padding-top: 23px;
+			}}
+		}
+	}
+}
+.container-grid{
+	box-sizing:border-box;
+	@media $m{
+	&{
+		display: flex;
+		flex-direction:column;
+	}}
+	@media $t,$d{
+	&{
+		padding: 0 25px;
+	}}
+	.row-container{
+		@media $m{
+		&{
+			box-sizing:border-box;
+			padding: 0 20px;
+		}}
+
+	}
+}
