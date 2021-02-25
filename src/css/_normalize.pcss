@@ -1,0 +1,138 @@
+html{
+	-ms-text-size-adjust:100%;
+	-webkit-text-size-adjust:100%;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	-webkit-tap-highlight-color:transparent;
+}
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+	margin:0;
+	padding:0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display:block;
+}
+
+input, textarea, button{
+	outline:none;
+	margin:0px;
+}
+iframe{
+	border:0;
+}
+textarea{
+	overflow:auto;
+	resize:none;
+	border:none;
+}
+button{
+	background:none;
+	position:relative;
+	overflow:visible;
+	-webkit-font-smoothing:inherit;
+	text-transform:none;
+	color:inherit;
+	font-family:inherit;
+	padding:0px;
+
+	/*&:after{
+		content:"";
+		display:inline-block;
+		vertical-align:top;
+		height:100%;
+	}*/
+}
+select {
+    text-transform:none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance:button; /* 2 */
+    cursor:pointer; /* 3 */
+}
+
+::-moz-focus-inner{
+   //Remove inner padding and border in Firefox 4+.
+	padding: 0;
+	border: 0;
+}
+:focus{
+	outline: 0;
+}
+ul,ol{
+	-webkit-padding-start: 0px;
+	margin:0;
+}
+li{
+	list-style:none;
+}
+
+a{
+	//Remove the gray background color from active links in IE 10.
+	background-color: transparent;
+	text-decoration:none;
+	color:inherit;
+}
+a:active,
+a:hover {
+	//Improve readability of focused elements when they are also in an active/hover state.
+	outline: 0;
+}
+img,input,button{
+	border:none;
+	outline:none;
+}
+b, strong{
+	font-weight:bold; /*ie fix*/
+}
+em{
+	font-style:italic;
+}
+svg:not(:root){
+	overflow:hidden;
+}
+table{
+	border-collapse:collapse;
+	border-spacing:0;
+	border:none;
+
+	td,
+	th{
+		padding:0;
+	}
+}
+form{
+	margin:0;
+	padding:0;
+}
+

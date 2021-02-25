@@ -1,0 +1,100 @@
+@font-face {
+	font-family: "icons";
+	src: url('../fonts/icons.eot');
+	src: url('../fonts/icons.eot?#iefix') format('eot'),
+		url('../fonts/icons.woff2') format('woff2'),
+		url('../fonts/icons.woff') format('woff'),
+		url('../fonts/icons.ttf') format('truetype'),
+		url('../fonts/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icons";
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	/* speak: none; // only necessary if not using the private unicode range (firstGlyph option) */
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@mixin icon-char($filename) {
+
+	@if $filename == arrow-left {
+		content: "\E001";
+	}
+	@if $filename == arrow-right {
+		content: "\E002";
+	}
+	@if $filename == fb {
+		content: "\E003";
+	}
+	@if $filename == filter {
+		content: "\E004";
+	}
+	@if $filename == insta {
+		content: "\E005";
+	}
+	@if $filename == link {
+		content: "\E006";
+	}
+	@if $filename == mouse {
+		content: "\E007";
+	}
+	@if $filename == swipe {
+		content: "\E008";
+	}
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	@if $insert == before {
+		&:before{
+			@if $extend == true {
+				@extend %icon;
+			} @else {
+				@include icon-styles;
+			}
+			@include icon-char($filename);
+		}
+	} @else {
+		&:after{
+			@if $extend == true {
+				@extend %icon;
+			} @else {
+				@include icon-styles;
+			}
+			@include icon-char($filename);
+		}
+	}
+}
+
+.icon-arrow-left {
+	@include icon(arrow-left);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-fb {
+	@include icon(fb);
+}
+.icon-filter {
+	@include icon(filter);
+}
+.icon-insta {
+	@include icon(insta);
+}
+.icon-link {
+	@include icon(link);
+}
+.icon-mouse {
+	@include icon(mouse);
+}
+.icon-swipe {
+	@include icon(swipe);
+}

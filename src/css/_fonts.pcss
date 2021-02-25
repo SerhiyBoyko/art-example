@@ -1,0 +1,61 @@
+/*
+Light     300
+Regular   400 (normal)
+Medium    500
+Bold      700 (bold)
+Black     900
+
+100 - Thin (Hairline)
+200 - Extra Light (Ultra Light)
+300 - Light
+400 - Normal
+500 - Medium
+600 - Semi Bold (Demi Bold)
+700 - Bold
+800 - Extra Bold (Ultra Bold)
+900 - Black (Heavy)
+*/
+
+$Rubik: Rubik;
+$Rubik: Formular;
+$OpenSans: OpenSans;
+
+$font_family_Rubik:'$(Rubik)', Helvetica, Arial, sans-serif;
+$font_family_Formular:'$(Formular)', Helvetica, Arial, sans-serif;
+$font_family_OpenSans:'$(OpenSans)', Helvetica, Arial, sans-serif;
+
+$f_black:900;
+$f_extrabold:900;
+$f_bold:700;
+$f_semi:600;
+$f_medium:500;
+$f_regular:400;
+$f_light:300;
+$f_thin:100;
+
+@mixin font($font,$type,$weight,$style:normal){
+	@font-face{
+		font-family:'$(font)';
+		src:url('../fonts/$(font)-$(type).eot');
+		src:local('nothing'),
+		url('../fonts/$(font)-$(type).eot?#iefix') format('embedded-opentype'),
+		url('../fonts/$(font)-$(type).woff2') format('woff2'),
+		url('../fonts/$(font)-$(type).woff') format('woff'),
+		url('../fonts/$(font)-$(type).ttf') format('truetype'),
+		url('../fonts/$(font)-$(type).svg#$(font)-$(type)') format('svg');
+		font-weight:$weight;
+		font-style:$style;
+	}
+}
+
+@include font(Rubik, Regular, $f_regular);
+@include font(Rubik, Medium, $f_medium);
+@include font(Rubik, Bold, $f_bold);
+
+@include font(OpenSans, Regular, $f_regular);
+@include font(OpenSans, Light, $f_light);
+@include font(OpenSans, Semibold, $f_semi);
+
+@include font(Formular, Medium, $f_medium);
+@include font(Formular, Black, $f_black);
+

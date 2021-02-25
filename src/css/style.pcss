@@ -1,0 +1,121 @@
+@function math(){}
+@function letter-spacing(){}
+@function vh(){}
+@function vw(){}
+
+@import "_normalize.pcss";
+
+@import "_property.pcss";
+@import "_mixins.pcss";
+
+/*View*/
+@import "view/_colors.pcss";
+
+
+@import "_fonts.pcss";
+@import "_font_icons.pcss";
+
+@import "view/_hover.pcss";
+
+
+
+/* view */
+@import "_grid.pcss";
+@import "pages/_fullscreen-page.pcss";
+
+
+
+@import "view/_text.pcss";
+
+
+
+
+
+
+
+/* Libs */
+
+@import "libs/_swiper.pcss";
+
+
+/*Parts*/
+
+@import "parts/_buttons.pcss";
+@import "parts/_burger.pcss";
+@import "parts/_form.pcss";
+
+
+/*Content*/
+
+@import "_custom.pcss";
+
+
+
+@import "content/_header.pcss";
+@import "content/_footer.pcss";
+@import "content/_wrappers.pcss";
+
+@import "content/_filter-wrapper.pcss";
+
+
+
+@import "parts/_col.pcss";
+
+
+@import "parts/_sliders.pcss";
+@import "parts/_pagination.pcss";
+
+@import "parts/_cursor.pcss";
+
+@import "view/_animation.pcss";
+
+
+
+/*Wrappers*/
+
+
+
+
+
+html,body{
+	width:100%;
+	height:100%;
+
+
+	#content{
+
+	}
+	&.overflow{
+		overflow:hidden;
+	}
+}
+
+body{
+	font-family:$font_family_Rubik;
+	font-weight:$f_regular;
+	color:$black;
+	@media $m{
+	&{
+		font-size: 14px;
+	}}
+	@media $t,$d{
+	&{
+		font-size: 16px;
+	}}
+
+	&.mobile_open{
+		overflow: hidden;
+	}
+}
+
+#page{
+	overflow:hidden;
+	width:100%;
+	min-height:100%;
+	box-sizing:border-box;
+	@include press-footer($footer-height-d,$footer-height-t,$footer-height-m);
+
+}
+#content{
+}
+

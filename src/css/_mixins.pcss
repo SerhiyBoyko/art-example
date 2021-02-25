@@ -1,0 +1,379 @@
+@mixin placeholder_color($color, $font_size, $font-weight:normal){
+	&::-webkit-input-placeholder{
+		color:$color;
+		font-size:$font_size;
+		font-weight:$font-weight;
+	}
+	&:-moz-placeholder{
+		color:$color;
+		opacity:1;
+		font-size:$font_size;
+		font-weight:$font-weight;
+	}
+	&::-moz-placeholder{
+		color:$color;
+		opacity:1;
+		font-size:$font_size;
+		font-weight:$font-weight;
+	}
+	&:-ms-input-placeholder{
+		color:$color;
+		font-size:$font_size;
+		font-weight:$font-weight;
+	}
+	&-webkit-appearance:none;
+}
+@mixin align-middle{
+	vertical-align: -webkit-baseline-middle;
+	vertical-align: -moz-middle-with-baseline;
+	vertical-align:middle;
+}
+
+@mixin clear{
+	&:after{
+		content:'';
+		display:block;
+		clear:both;
+	}
+}
+@mixin mask($side:before,$top:0,$left:0){
+	&:$side{
+		content:'';
+		position:absolute;
+		top:$top;
+		left:$left;
+		right:0;
+		bottom:0;
+	}
+}
+@mixin pos-full{
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
+
+@mixin bg($wide:cover,$x:center,$y:center){
+	background-repeat:no-repeat;
+	background-position:$x $y;
+	background-size:$wide;
+}
+
+@mixin popup($index:1){
+	margin:0;
+	padding:0;
+	width:100%;
+	min-height:100%;
+	height:100%;
+	position:fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	z-index:$index;
+	overflow:auto;
+}
+
+
+/* Fix */
+@mixin fix-blockquote-margin-chrome{
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+	-webkit-padding-start: 0px;
+}
+
+@mixin backface-visibility{
+	-webkit-backface-visibility:hidden;
+	-moz-backface-visibility:hidden;
+	-ms-backface-visibility:hidden;
+	-o-backface-visibility:hidden;
+	backface-visibility:hidden;
+}
+@mixin user-select($val:none){
+	-moz-user-select: $val;
+	-khtml-user-select: $val;
+	user-select: $val;
+}
+
+
+@mixin grab-cursor {
+	cursor: url('../images/cursor/openhand.cur'), all-scroll;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
+	cursor: -o-grab;
+	cursor: -ms-grab;
+	cursor: grab;
+}
+
+@mixin grabbing-cursor {
+	cursor: url('../images/cursor/closedhand.cur'), all-scroll;
+	cursor: -webkit-grabbing;
+	cursor: -moz-grabbing;
+	cursor: -o-grabbing;
+	cursor: -ms-grabbing;
+	cursor: grabbing;
+}
+
+@mixin text-fill{
+	position:relative;
+	@include mask;
+	&:before{
+		/*height:100%;*/
+		background-color:rgba($white,.7);
+		background-size:100%;
+		z-index:-1;
+
+	}
+}
+@mixin gradient($r,$g,$b){
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,1+51,1+51,0+100 */
+	background: -moz-linear-gradient(top, rgba($r,$g,$b,1) 0%, rgba($r,$g,$b,1) 51%, rgba($r,$g,$b,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgba($r,$g,$b,1) 0%,rgba($r,$g,$b,1) 51%,rgba($r,$g,$b,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgba($r,$g,$b,1) 0%,rgba($r,$g,$b,1) 51%,rgba($r,$g,$b,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+}
+@mixin no-select{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: default;
+}
+@mixin flex-center{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+@mixin inline-flex-center{
+	display:inline-flex;
+	justify-content:center;
+	align-items:center;
+}
+@mixin black-shadow{
+	background: -moz-linear-gradient(bottom, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.95) 20%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to top, rgba(0,0,0,0.65) 20%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+}
+@mixin bottom-shadow($color){
+	background: -moz-linear-gradient(bottom, rgba($color,0.95) 20%, rgba($color,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(bottom, rgba($color,0.95) 20%,rgba($color,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to top, rgba($color,0.65) 20%,rgba($color,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@mixin right-shadow($color,$opacity:0.65){
+	background: -moz-linear-gradient(right, rgba($color,0.95) 20%, rgba($color,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(right, rgba($color,0.95) 20%,rgba($color,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to left, rgba($color,$opacity) 20%,rgba($color,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+@mixin expand{
+	margin-left:-10000px;
+	padding-left:10000px;
+	margin-right:-10000px;
+	padding-right:10000px;
+}
+@mixin expand-50{
+	margin-left:-50px;
+	padding-left:50px;
+	margin-right:-50px;
+	padding-right:50px;
+}
+@mixin expand-20{
+	margin-left:-20px;
+	padding-left:20px;
+	margin-right:-20px;
+	padding-right:20px;
+}
+@mixin grow-20{
+	margin-left:-20px;
+	margin-right:-20px;
+}
+@mixin expand-24{
+	margin-left:-24px;
+	padding-left:24px;
+	margin-right:-24px;
+	padding-right:24px;
+}
+@mixin link-hover{
+	&:hover{
+		@media $desktop{
+		&{
+			color:$blue;
+		}}
+	}
+}
+@mixin absolute-center-transform{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+}
+@mixin font-responsive($pxm,$pxd){
+	font-size: responsive $pxm $pxd;
+	font-range: 320px 1200px;
+}
+
+@mixin line-height-responsive($lh,$fs){
+	line-height:$lh/$fs;
+}
+
+
+@mixin press-footer($height-d,$height-t,$height-m){
+	@media $mobile{
+	&{
+		padding-bottom:$height-m;
+		margin-bottom:-$height-m;
+	}}
+	@media $tablet{
+	&{
+		padding-bottom:$height-t;
+		margin-bottom:-$height-t;
+	}}
+	@media $desktop{
+	&{
+		padding-bottom:$height-d;
+		margin-bottom:-$height-d;
+	}}
+}
+
+@mixin arrow($color:#111){
+	right: -15px;
+	top: 50%;
+	margin-top: -1px;
+	width: 0;
+	height: 0;
+	border: 0 solid transparent;
+	border-left-width: 3px;
+	border-right-width: 3px;
+	border-top: 4px solid $color;
+}
+
+
+@mixin btn-spin($color_before,$color_after,$size){
+	&.roll-box {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		box-sizing: border-box;
+		box-shadow: inset 0 0 0 1px $color_before;
+		line-height:0;
+		color: $color_before;
+		position: relative;
+		&::before,
+		&::after {
+			content: '';
+			+size: 100% 100%;
+			box-sizing: inherit;
+			position: absolute;
+		}
+		&.roll-box{
+			+size: $size $size;
+			.active & {
+				color: $color_after;
+			}
+			&:before,
+			&:after {
+				top: 0;
+				left: 0;
+			}
+			&:before {
+				border: 2px solid transparent;
+			}
+			.active &:before {
+				border-top-color: $color_after;
+				border-right-color: $color_after;
+				border-bottom-color: $color_after;
+			}
+			&:after {
+				border: 0 solid transparent;
+				opacity:0;
+			}
+			.active &:after {
+				border-top: 2px solid $color_after;
+				border-left-width: 2px;
+				border-right-width: 2px;
+				transform: rotate(270deg);
+				opacity:1;
+			}
+		}
+		&.roll-box {
+			border-radius: 100%;
+			box-shadow: none;
+			&::before,
+			&::after {
+				border-radius: 100%;
+			}
+		}
+	}
+}
+
+
+@mixin font-responsive($pxm,$pxd){
+	font-size: responsive $pxm $pxd;
+	font-range: 320px 1200px;
+}
+
+/*@mixin font-responsive-d($pxm,$pxd){
+	font-size: responsive $pxm $pxd;
+	font-range: 1360px 1920px;
+}*/
+
+@mixin font-size-d($pxm,$pxd){
+	font-size: responsive $pxm $pxd;
+	font-range: 1150px 1600px;
+}
+
+@mixin font-size-t-m($pxm,$pxd){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 320px 760px;
+}
+@mixin font-size-over-middle($pxm,$pxd){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 480px 1600px;
+}
+
+@mixin font-height-d($pxm,$pxd,$lh){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 1150px 1600px;
+	line-height:$lh/$pxd;
+}
+@mixin font-height-t-m($pxm,$pxd,$lh){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 320px 1600px;
+	line-height:$lh/$pxd;
+}
+@mixin font-size($pxm,$pxd){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 320px 1600px;
+}
+@mixin font-size-480($pxm,$pxd){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 480px 1600px;
+}
+@mixin font-size-d($pxm,$pxd){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 1150px 1600px;
+}
+
+@mixin font-height($pxm,$pxd,$lh){
+	font-size: responsive $(pxm)px $(pxd)px;
+	font-range: 320px 1600px;
+	line-height:$lh/$pxd;
+}
+@mixin line-height-responsive($lh,$fs){
+	line-height:$lh/$fs;
+}
+@mixin ls($val){
+	letter-spacing:0.0625*$val;
+}
+
+@mixin m-t($count){margin-top: $(count)/850*100;}
+@mixin m-b($count){margin-bottom: $(count)/850*100;}
+@mixin m-t-b($count,$count2){margin-top: $(count)/850*100;margin-bottom: $(count2)/850*100;}
+@mixin p-h($count){padding: $(count)/850*100 0 $(count)/850*100;}
+@mixin p-b($count){padding-bottom: $(count)/850*100;}
