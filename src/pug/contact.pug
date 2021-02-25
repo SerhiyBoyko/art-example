@@ -1,0 +1,62 @@
+- var page_name = 'contact';
+
+include includes/_page-includes
+
+
+mixin hidden-box()
+	.hidden-box&attributes(attributes)
+		.container
+			.box-content
+				.text-custom-grey Doppel Феликс использует калибр A11R, который является Rattrapante версией калибра А11 , который Habring² введенным в 2014 г. В то время как A11R разделяет некоторые из архитектуры Valjoux 7750 (как A11 сделали некоторые из 7760) там много существенных различий
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+popup-request()
+		+header().header-dark
+		section.section-top.section-contact
+			.container
+				.title-box
+					h1 Всё начинается с отличного разговора
+					.title Присылайте предложения
+						br.hide-m
+						| на
+						a.hover-link(href='mailto:info@art-formula.ru') info@art-formula.ru,
+						br
+						|или звоните
+						a.hover-link(href='tel:+74956173946') +7 (495) 617-39-46
+			.container
+				.section
+					.side-row.side-row-align.contact-side
+						.side.vw-36.side-left
+							div.text-box
+								.link-box
+									.descr-link Адрес офиса
+									.title.text-24 141008, Московская обл., г. Мытищи, ул. Лётная, стр.19, офис 351
+						.side.vw-36.side-right
+							div.text-box
+								.link-box
+									.descr-link Время работы
+									.title.text-24 Понедельник — пятница с 10:00 до 19:00, суббота, воскресенье — выходные дни
+			.map-wrapper.hover-link
+				#ymap_ctrl_display.ctrl_display
+					div Чтобы изменить масштаб, прокручивайте карту, удерживая клавишу Ctrl.
+				.map.no-cursor#map()
+
+
+
+		+section-form-contact()
+
+
+
+
+
+
+
+		+footer()
+		include includes/_custom-includes

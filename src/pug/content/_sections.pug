@@ -1,0 +1,59 @@
+mixin section-form()
+	section.bg-grey.bg-svg#form&attributes(attributes)
+		.container.form-container
+			.title-box.hide-d
+				.title-top-content.text-48-m.c-red Ваше мероприятие достойно стать лучшим, где вы когда-либо были
+			.side-row
+				.side.col-500
+					.title-box.title-box-form
+						.title-top-content.text-48-m.c-red.only-d Ваше мероприятие достойно стать лучшим, где вы когда-либо были
+						.block
+							a.link.text-24.hover-link(href='tel:+74956173946') +7 (495) 617-39-46
+							.text-14-descr Если не захотите заполнять форму, то можете просто позвонить нам по телефону
+						.block
+							a.link.text-24.hover-link(href='mailto:info@art-formula.ru') info@art-formula.ru
+							.text-14-descr Или прислать запрос на почту
+				.form-wrapper
+					div.input-box
+						input.input#form_name(required)
+						label(for='form_name'): .text Ваше имя
+					div.input-box.error(data-error='Неверный формат для поля')
+						input.input#form_email(required value='fr32f42g432hb')
+						label(for='form_email' ): .text Email
+
+					div.input-box
+						input.input#form_phone(required)
+						label(for='form_phone'): .text Телефон
+					div.input-box
+						input.input#form_descr(required)
+						label(for='form_descr')
+							.text Кратко опишите суть задачи
+								br
+								| или тематику мероприятия
+					+btn-send().dark.cursor_white
+mixin section-form-contact()
+	section.bg-grey&attributes(attributes)
+		.container.form-container
+			.title-box.hide-d
+				.title-top-content.text-48-m.c-red Ваше мероприятие достойно стать лучшим, где вы когда-либо были
+			.side-row
+				.side.col-500
+					.title-box.title-box-form
+						.title-top-content.text-48-m.c-red.only-d Ваше мероприятие достойно стать лучшим, где вы когда-либо были
+				.form-wrapper
+					div.input-box
+						input.input#form_name(required)
+						label(for='form_name'): .text Ваше имя
+					div.input-box
+						input.input#form_email(required)
+						label(for='form_email'): .text Email
+					div.input-box
+						input.input#form_phone(required)
+						label(for='form_phone'): .text Телефон
+					div.input-box
+						input.input#form_descr(required)
+						label(for='form_descr')
+							.text Кратко опишите суть задачи
+								br
+								| или тематику мероприятия
+					+btn-send().dark.cursor_white

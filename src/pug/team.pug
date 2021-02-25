@@ -1,0 +1,54 @@
+- var page_name = 'team';
+
+include includes/_page-includes
+
+mixin team_slide()
+	.container-page.container-page-team
+		.container
+			.title-box.c-black
+				h1 Команда Арт-Формулы
+				.title-48 Организация мероприятий — это
+					|
+					span.c-red   сумма грамотных решений логических задач
+				.scroll-mouse-box
+					.icon-mouse
+					.text Используйте скролл
+						br
+						| для просмотра проектов
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+header()
+		.fullscreen-page
+			.swiper-container.team_img_slider
+				.swiper-wrapper
+					.swiper-slide: .bg-img-box: .bg-color
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/team/1.png)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/team/2.png)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/team/3.png)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/team/4.png)')
+			.swiper-container.team_slider
+				.swiper-wrapper
+					.swiper-slide.slide-main: +team_slide()
+					.swiper-slide
+						.container: +item-team-1()
+					.swiper-slide
+						.container: +item-team-2()
+					.swiper-slide
+						.container: +item-team-3()
+					.swiper-slide
+						.container: +item-team-4()
+					.swiper-slide.swiper-slide-last: +footer()
+
+
+
+
+
+		include includes/_custom-includes

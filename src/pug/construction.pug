@@ -1,0 +1,34 @@
+- var page_name = 'faq';
+
+include includes/_page-includes
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		.fullscreen-page
+			.logo-art: img(src='images/logo-art.svg')
+			.video-wrapper
+				.video
+					<video autoplay loop id="video-background" muted='true'>
+					<source src="video/showreel.mp4" type="video/mp4">
+					</video>
+			.container.container-page.container-page-construction
+				.title-box
+					h1 Скоро открытие
+					.title Сайт находится в разработке
+				.feedback
+					.line
+						a.link(href='tel:+74956173946') +7 (495) 617-39-46
+						a.link(href='mailto:info@art-formula.ru') info@art-formula.ru
+					a.link(href='https://goo.gl/maps/Y9DMLAsvbGdnCs5G8' target='_blank') 141008, г. Мытищи, ул. Лётная, стр.19, офис 351
+
+
+
+
+
+		include includes/_custom-includes

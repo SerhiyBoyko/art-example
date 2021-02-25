@@ -1,0 +1,53 @@
+doctype html
+html(lang='ru')
+	include includes/_head
+	body
+		include includes/_urls
+		style(type="text/css")
+			| body{
+			| 	padding:20px;
+			| 	width:auto;
+			| 	min-width:0px;
+			| 	box-sizing: border-box;
+			|	color:#111;
+			|	cursor:auto!important;
+			| }
+			| a{
+			| 	display:inline-block;
+			| 	margin-bottom: 5px;
+			|    text-decoration:underline;
+			|    cursor:pointer!important;
+			| }
+			| a:after{
+			| 	content:'';
+			| 	display:block;
+			| }
+			| a:hover{
+			|    text-decoration:none;
+			| }
+			| h3{
+			|    margin:20px 0px 10px;
+			| }
+			| h3.first{
+			|    margin-top:0px;
+			| }
+		h1 Арт формула
+
+		h3 Pages
+
+		div: a(href=pages.main.url) Home
+		div: a(href=pages.projects.url) Projects
+		div: a(href=pages.project.url) Project
+		div: a(href=pages.squares.url) Squares
+		div: a(href=pages.squares_page.url) Squares page
+		div: a(href=pages.services.url) Services
+		div: a(href=pages.team.url) Team
+		div: a(href=pages.contact.url) Contact
+		br
+		div: a(href=pages.construction.url) Construction
+		br
+		br
+
+
+
+

@@ -1,0 +1,122 @@
+- var page_name = 'squares-page';
+
+include includes/_page-includes
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+popup-request()
+		+header()
+		.fullscreen-page
+			.img-back: .img-bg(style='background-image:url(images/example/squares-main.jpg)')
+			.container.container-page
+				.title-box
+					h1 До 250 человек
+					.title-top-content.title-48 Площадка №2
+			.fullscreen-footer
+				.container-wide.end-d
+					+btn-see-portfolio(href=pages.projects.url)
+		section.section-grey
+			.container
+				.side-row.wrap-m-t
+					.side.side-title
+						.title-box
+						div.text-box
+							.link-box
+								.descr-link Описание
+								.title.text-16 Тентованный банкетный зал на территории яхт-клуба с панорамным видом на всю территорию клуба В непосредственной близости от шатра расположен бассейн с зоной отдыха, футбольное поле, прокат водноспортивной техники и летнее кафе.
+						div.table
+							.top-line
+								.col.title Шатер, кв.м
+								.col.title.hide-m Аренда, руб.
+								.col.title.hide-m Барбекю, руб.
+								.col.title.hide-m Банкет, руб.
+							.table-content
+								.col
+									span.text Аренда, руб.
+									ul
+										li: span.text пн-ср. 35 000
+										li: span.text чт. 40 000
+										li: span.text пт. 55 000
+										li: span.text сб. 65 000
+										li: span.text вс. 25 000
+								.col
+									span.text Барбекю, руб.
+									span.text от 2 000
+								.col
+									span.text Банкет, руб.
+									span.text от 3 000
+
+					.side.half
+						div.text-box
+							.link-box
+								.descr-link Расположение
+								.title.text-24 7 км от МКАД по Дмитровскому ш.
+							.link-box
+								.descr-link Вместимость
+								.title.text-24 Банкет до 250 чел. / фуршет до 500 чел.
+							.link-box
+								.descr-link Способ доставки
+								.title.text-24 Автотранспорт/теплоход
+							.link-box
+								.descr-link Номерной фонд
+								.title.text-24 7 номеров различной категории
+							.link-box
+								.descr-link Обслуживание персонала
+								.title.text-24 10% от стоимости меню
+		section.section-grey.p-t-0
+			.container-grid
+
+				.row-grid
+					.g.g-2
+						.g.g-wide-500(style='background-image:url(images/example/wide-1.jpg)')
+						.g.g-4-220(style='background-image:url(images/example/min-9.jpg)')
+						.g.g-4-220(style='background-image:url(images/example/min-10.jpg)')
+					.g.g-2
+						.g.g-4-220.column
+							.g.g-4-100(style='background-image:url(images/example/min-11.jpg)')
+							.g.g-4-200(style='background-image:url(images/example/wide-2.jpg)')
+						.g.g-4-220.column
+							.g.g-4-100(style='background-image:url(images/example/min-12.jpg)')
+							.g.g-4-100(style='background-image:url(images/example/min-13.jpg)')
+							.g.g-4-100(style='background-image:url(images/example/min-14.jpg)')
+
+				.row-grid
+
+		section.full-height.full-height-slider
+			.swiper-container.project_img_slider_content
+				.swiper-wrapper
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/2.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/3.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+			.swiper-container.project_slider_content
+				.swiper-wrapper
+					.swiper-slide: +item-square-slide-content()
+					.swiper-slide: +item-square-slide-content-2()
+					.swiper-slide: +item-square-slide-content()
+					.swiper-slide: +item-square-slide-content-2()
+
+
+			.btn-project-box.only-m
+				+btn-project()
+			.fullscreen-footer.arrow-slider-container.hide-m
+				.arrow-container
+					+slide-left()
+					+slide-right()
+		+section-form()
+
+
+
+
+
+
+
+		+footer()
+		include includes/_custom-includes

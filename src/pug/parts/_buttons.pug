@@ -1,0 +1,104 @@
+mixin button-download()
+	div.btn.btn-download
+		span Downloads
+
+mixin button-arrow
+	div.btn.btn-arrow
+		.icon-arrow
+
+mixin btn-showreel()
+	.btn-h.btn-220.cursor_white&attributes(attributes)
+		a.hidden-link(href='#')
+		.text Посмотреть Showreel
+		.arrow-triangle
+
+mixin btn-presentation()
+	.btn-h.btn-220&attributes(attributes)
+		.text Скачать презентацию
+		.arrow-triangle
+
+mixin btn-showreel-load()
+	.btn-h.btn-220&attributes(attributes)
+		div
+			.text Скачать Showreel
+			.text-descr.text-10 58.4 mb
+		.arrow-triangle
+mixin btn-project()
+	.btn-project.btn-h.btn-220&attributes(attributes)
+		.text Смотреть
+			br
+			| проекты
+		.arrow-triangle
+mixin btn-org-1()
+	a.btn-h.btn-330.cursor_white(href='#form')&attributes(attributes)
+		.text Получить предложение по мероприятию
+		.arrow-triangle
+mixin btn-org-dark()
+	a.btn-h.btn-330.dark.cursor_white(href='#form')
+		.text Получить предложение по мероприятию
+		.arrow-triangle
+mixin btn-org-2()
+	.btn-h.btn-h-see&attributes(attributes)
+		.text
+			span Смотреть полный отзыв
+			span.icon-link
+mixin btn-org-3()
+	.btn-h.btn-h-see&attributes(attributes)
+		.text
+			span скачать полный отзыв
+			span.icon-link
+mixin btn-send()
+	#request_send.btn-h.btn-220&attributes(attributes)
+		.text Отправить
+		.arrow-triangle
+mixin btn-arrow(name)
+	.btn-h.dark.btn-220&attributes(attributes)
+		.text= name
+		.arrow-triangle
+mixin btn-see-presentation(name)
+	.btn-h.btn-220.cursor_white&attributes(attributes)
+		.text Посмотреть презентацию
+		.arrow-triangle
+mixin btn-see-portfolio(name)
+	a.btn-h.btn-220.cursor_white&attributes(attributes)
+		.text Перейти
+			br
+			| в портфолио
+		.arrow-triangle
+mixin slide-left()
+	.btn-h.dark.btn-110.slide_content_left.cursor_white&attributes(attributes)
+		.arrow.icon-arrow-left
+mixin slide-right()
+	.btn-h.dark.btn-110.slide_content_right.cursor_white&attributes(attributes)
+		.arrow.icon-arrow-right
+
+
+mixin slide-left-news()
+	.slide_news.slide_news_left&attributes(attributes)
+		.arrow.icon-arrow-left
+mixin slide-right-news()
+	.slide_news.slide_news_right&attributes(attributes)
+		.arrow.icon-arrow-right
+
+
+mixin btn-see-project()
+	.btn-link.hover-link&attributes(attributes)
+		a.hidden-link(href='#')
+		.text Смотреть проект
+		.arrow-triangle
+
+mixin btn-tel()
+	.btn-team.btn-h.btn-220.cursor_white&attributes(attributes)
+		.text Связаться
+		.arrow-triangle
+mixin btn-mob(name)
+	.btn-h.btn-220&attributes(attributes)
+		.text Получить предложение
+			br
+			| по мероприятию
+		.arrow-triangle
+mixin btn-FILTER()
+	.btn-h.btn-220.btn-FILTER&attributes(attributes)
+		.hidden-link
+		.text Фильтры
+		.icon-filter

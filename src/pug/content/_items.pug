@@ -1,0 +1,198 @@
+mixin item-place-1()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-1.jpg)')
+		.text-box
+			.text-12 До 1 000 человек
+			.title.text-30-m Площадка №1
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-2()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-2.jpg)')
+		.text-box
+			.text-12 До 250 человек
+			.title.text-30-m Площадка №2
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-3()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-3.jpg)')
+		.text-box
+			.text-12 До 90 человек
+			.title.text-30-m Площадка №3
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-4()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-4.jpg)')
+		.text-box
+			.text-12 До 200 человек
+			.title.text-30-m Площадка №4
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-5()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-5.jpg)')
+		.text-box
+			.text-12 До 150 человек
+			.title.text-30-m Площадка №5
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-6()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-6.jpg)')
+		.text-box
+			.text-12 До 250 человек
+			.title.text-30-m Площадка №6
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-7()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-7.jpg)')
+		.text-box
+			.text-12 До 90 человек
+			.title.text-30-m Площадка №7
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-8()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-8.jpg)')
+		.text-box
+			.text-12 До 200 человек
+			.title.text-30-m Площадка №8
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-9()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-9.jpg)')
+		.text-box
+			.text-12 До 123 человек
+			.title.text-30-m Площадка №9
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-10()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-10.jpg)')
+		.text-box
+			.text-12 До 100 человек
+			.title.text-30-m Площадка №10
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-11()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-11.jpg)')
+		.text-box
+			.text-12 До 150 человек
+			.title.text-30-m Площадка №11
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+mixin item-place-12()
+	.item-place.cursor_white&attributes(attributes)
+		.img-box: .img-bg(style='background-image:url(images/example/place-12.jpg)')
+		.text-box
+			.text-12 До 700 человек
+			.title.text-30-m Площадка №12
+			.text-14-grey 7 км от МКАД по Дмитровскому шоссе
+
+
+mixin item-square-slide()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link МТС
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) Вывезти 70 топ-менеджеров МТС на Камчатку и заставить ловить рыбу, чтобы выжить
+			div.hide-box
+				.descr.text-14-descr Декор площадки парящими арт-объектами на высоте 40 метром над землей
+				+btn-see-project()
+
+
+mixin item-news($title,$descr)
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link= $title
+				a.title.link-custom.text-24.hover-link(href=pages.project.url)= $descr
+			div.hide-box
+
+
+mixin item-square-slide-content()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link МТС
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) Вывезти 70 топ-менеджеров МТС на Камчатку и заставить ловить рыбу, чтобы выжить
+			div.hide-box
+mixin item-square-slide-content-2()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Korablik
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) Korablik People Awards, Церемония награждения лучших сотрудников
+			div.hide-box
+
+mixin item-square-slide-2()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Rambler
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) День арбуза в Rambler Group
+			div.hide-box
+				.descr.text-14-descr Декор площадки парящими арт-объектами на высоте 40 метром над землей
+				+btn-see-project()
+
+mixin item-square-slide-3()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Ситилинк
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) Шнур, Серебро, 600 человек, 2 дня нон-стоп программа для компании Ситилинк
+			div.hide-box
+				.descr.text-14-descr Декор площадки парящими арт-объектами на высоте 40 метром над землей
+				+btn-see-project()
+
+mixin item-square-slide-4()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Ситилинк
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) Шнур, Серебро, 600 человек, 2 дня нон-стоп программа для компании Ситилинк
+			div.hide-box
+				.descr.text-14-descr Декор площадки парящими арт-объектами на высоте 40 метром над землей
+				+btn-see-project()
+
+mixin item-square-slide-5()
+	.item-square&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Prodo
+				a.title.link-custom.text-24.hover-link(href=pages.project.url) Prodo New Year 2018
+			div.hide-box
+				.descr.text-14-descr Декор площадки парящими арт-объектами на высоте 40 метром над землей
+				+btn-see-project()
+
+
+mixin item-team-1()
+	.item-team&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Генеральный директор
+				.title.text-30-m Ирина Ерошова
+			div.hide-box
+				.descr Все начинается с изучения Вашей компании. История, главные события года, традиции и собственная культура. На основе этой информации создаем идею.
+		+btn-tel()
+mixin item-team-2()
+	.item-team&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Режиссёр-постановщик
+				.title.text-30-m Лариса Спорыхина
+			div.hide-box
+				.descr Рациональность не отменяет креативность! У нас сильная команда дизайнеров, копирайтеров, сценаристов и режиссеров.
+		+btn-tel()
+mixin item-team-3()
+	.item-team&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Директор по развитию
+				.title.text-30-m Павел Ерошов
+			div.hide-box
+				.descr Держим руку на пульсе, изучаем самые свежие тренды в event-индустрии, создаем уникальное.
+		+btn-tel()
+mixin item-team-4()
+	.item-team&attributes(attributes)
+		div.text-box
+			.link-box
+				.subtitle.descr-link Креативный директор
+				.title.text-30-m Мария Огаркова
+			div.hide-box
+				.descr Искренность в работе с подрядчиками. С нами легко, мы не подведем.
+		+btn-tel()

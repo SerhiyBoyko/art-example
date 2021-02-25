@@ -1,0 +1,13 @@
+mixin popup-request()
+	.fullscreen-page.popup-request&attributes(attributes)
+		.btn-close.close_popup
+			.close-icon
+				span
+				span
+		.container.container-page
+			.title-box.title-box-top
+				.title.c-red Ваша заявка успешно отправлена!
+				.descr.c-black: span.text-14-l Наш менеджер перезвонит вам в ближайшее время.
+		.fullscreen-footer
+			.container-wide.end-d
+				+btn-arrow('Понятно').close_popup

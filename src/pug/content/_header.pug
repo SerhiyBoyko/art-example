@@ -1,0 +1,51 @@
+include ../parts/_burger
+
+mixin header()
+	header&attributes(attributes)
+		.container-wide.header-container
+			a.logo-art(href=pages.main.url): img.img(src='images/logo-art.svg')
+			ul.number-box.only-d
+				li: a.hover-link(href='tel:+74956173946') +7 (495) 617-39-46
+				li: a.hover-link(href='mailto:info@art-formula.ru') info@art-formula.ru
+			ul.nav.only-d
+				li: a.hover-link(href='#').active О компании
+				li: a.hover-link(href=pages.services.url) Услуги
+				li: a.hover-link(href=pages.projects.url) Проекты и клиенты
+				li: a.hover-link(href=pages.team.url) Команда
+				li: a.hover-link(href=pages.contact.url) Контакты
+	.hamburger-wrapper.hide-d
+		.hamburger#hamburger
+			span.hamburger-box
+				span.hamburger-inner
+	.mobile-menu
+		ul
+			li: a(href='#') О компании
+			li: a(href=pages.services.url) Услуги
+			li: a(href=pages.projects.url) Проекты и клиенты
+			li: a(href=pages.team.url) Команда
+			li: a(href=pages.contact.url) Контакты
+
+		div.box
+			.descr-link Контактный телефон
+			a.link.text-24(href='tel:+74956173946') +7 (495) 617-39-46
+		div.box
+			.descr-link Адрес офиса
+			a.link.text-24(href='#') 141008, г. Мытищи,
+				br
+				| ул. Лётная, стр.19, офис 351
+		div.box.box-soc
+			.descr-link Вопросы и предложения
+			a.link.text-24(href='mailto:info@art-formula.ru') info@art-formula.ru
+			.soc-row
+				a.icon.icon-fb(href='#')
+				a.icon.icon-insta(href='#')
+		div.box
+			.btn-h.btn-300
+				.text Получить предложение
+					br
+					| по мероприятию
+				.arrow-triangle
+
+
+
+

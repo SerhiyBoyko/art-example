@@ -1,0 +1,103 @@
+- var page_name = 'project';
+
+include includes/_page-includes
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+popup-request()
+		+header()
+		.fullscreen-page
+			.img-back: .img-bg(style='background-image:url(images/example/project-main.jpg)')
+			.container.container-page
+				.title-box.title-box-wide
+					h1 Тимбилдинг для Леруа Мерлен
+					.title-48 Кладовщик обогнал директора по персоналу. Тимбилдинг
+						div на картингах для Леруа Мерлен
+			.fullscreen-footer
+				.container-wide.end-d
+					+btn-see-presentation()
+		section.section-grey.section-grid
+			.container-grid
+				.row-grid.row-container.order-1
+					.g.g-2.g-logo-box
+						.g.g-logo: img.logo(src='images/example/pjoject-logo.png')
+					.g.g-2
+						div.text-box
+							.link-box.top-box
+								.descr-link Дата мероприятия
+								.title.text-24 22 июля 2017
+							.link-box
+								.descr-link Место проведения
+								.title.text-24 Москва. Яхт-клуб «Адмирал»
+							.link-box
+								.descr-link Формат
+								.title.text-24 Юбилейное выездное мероприятие
+							.link-box
+								.descr-link Количество участников
+								.title.text-24 350
+				.row-grid.order-3
+					.g.g-2
+						.g.g-4(style='background-image:url(images/example/min-1.jpg)')
+						.g.g-4(style='background-image:url(images/example/min-2.jpg)')
+						.g.g-4(style='background-image:url(images/example/min-3.jpg)')
+						.g.g-4(style='background-image:url(images/example/min-4.jpg)')
+					.g.g-2.single(style='background-image:url(images/example/half-1.jpg)')
+				.row-grid.order-2
+					.g.g-2.single(style='background-image:url(images/example/half-2.jpg)')
+					.g.g-2
+						.g.g-4(style='background-image:url(images/example/min-5.jpg)')
+						.g.g-4(style='background-image:url(images/example/min-6.jpg)')
+						.g.g-4(style='background-image:url(images/example/min-7.jpg)')
+						.g.g-4(style='background-image:url(images/example/min-8.jpg)')
+		section.bg-red.bg-svg-red.cursor-bg-white
+			.container
+				.side-row.side-row-content
+					.side.col-500
+						.title-box
+							.title-48 Оказанные услуги и особенности мероприятия
+					.side.half
+						.text-box
+							.content-title.text-24 Декор площадки парящими арт-объектами на высоте 40 метром над землей
+							.content-title.text-24 Гала-ужин в формате барбекю
+							.content-title.text-24 Мотивационный флешмоб — построение сотрудников в логотип компании
+							.content-title.text-24 Командообразующая игра с вовлечением всех участников
+							.content-title.text-24.mb-0 Создание арт-коллажа в стиле комикса с супер-героями компании
+
+		section.full-height.full-height-slider
+			.swiper-container.project_img_slider_content
+				.swiper-wrapper
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/2.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/3.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+			.swiper-container.project_slider_content
+				.swiper-wrapper
+					.swiper-slide: +item-square-slide-content()
+					.swiper-slide: +item-square-slide-content-2()
+					.swiper-slide: +item-square-slide-content()
+					.swiper-slide: +item-square-slide-content-2()
+
+
+			.btn-project-box.only-m
+				+btn-project()
+			.fullscreen-footer.arrow-slider-container.hide-m
+				.arrow-container
+					+slide-left()
+					+slide-right()
+		+section-form()
+
+
+
+
+
+
+
+		+footer()
+		include includes/_custom-includes

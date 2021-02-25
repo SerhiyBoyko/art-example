@@ -1,0 +1,69 @@
+- var page_name = 'project';
+
+include includes/_page-includes
+
+mixin main_slide()
+	.container-page
+		.title-box
+			h1 Event проекты и мероприятия
+			.title-box-text.title-48 Нам есть что показать.
+			div.transform-title-box.flex-a_t_d
+				.title.title-48 Например,
+				.swiper-container.phrase_slider
+					.swiper-wrapper
+						.swiper-slide: span.slide-name корпоративное
+						.swiper-slide: span.slide-name новогодние
+			.swiper-container.phrase_slider
+				.swiper-wrapper
+					.swiper-slide: span.slide-name событие
+					.swiper-slide: span.slide-name корпоративы
+			.scroll-mouse-box.only-d
+				.icon-mouse
+				.text Используйте скролл
+					br
+					| для просмотра проектов
+			.scroll-mouse-box.hide-d
+				.icon-mouse
+				.text Листайте вниз
+					br
+					| для просмотра проектов
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+header().header-dark
+		.fullscreen-page
+			//.slide_project.slide_project_left
+			//.slide_project.slide_project_right
+			.img-back: .img-bg(style='background-image:url(images/example/project-main.jpg)')
+			.swiper-container.project_img_slider
+				.swiper-wrapper
+					.swiper-slide: .bg-img-box: .bg-color
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/2.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/3.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/2.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/3.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img-box: .bg-img(style='background-image:url(images/project/2.jpg)')
+			.swiper-container.project_slider.project_slider_wide
+				.swiper-wrapper
+					.swiper-slide.main-slide: +main_slide()
+					.swiper-slide: +item-square-slide()
+					.swiper-slide: +item-square-slide-2()
+					.swiper-slide: +item-square-slide-3()
+					.swiper-slide: +item-square-slide-4()
+					.swiper-slide: +item-square-slide-5()
+					.swiper-slide: +item-square-slide()
+					.swiper-slide: +item-square-slide-2()
+					.swiper-slide: +item-square-slide-3()
+				.swiper-scrollbar.swiper-scrollbar-project
+
+		include includes/_custom-includes

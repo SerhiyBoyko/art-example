@@ -1,0 +1,9 @@
+mixin video-wrapper-main()
+	.video-wrapper&attributes(attributes)
+		.video-box
+			.img.only-m(style='background-image:url(images/main-m.jpg)')
+			.img.only-t(style='background-image:url(images/main-t.jpg)')
+			.video.only-d
+				<video autoplay loop id="video-background" muted='true'>
+				<source src="video/showreel.mp4" type="video/mp4">
+				</video>

@@ -1,0 +1,67 @@
+- var page_name = 'squares';
+
+include includes/_page-includes
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+header()
+		.mobile-menu-FILTER
+			.hamburger-wrapper.close-filter
+				.hamburger.is-active#filter
+					span.hamburger-box
+						span.hamburger-inner
+			.inner
+				.title-box
+					.title Фильтры
+				.select-line
+					+select-1()
+					+select-2()
+					+select-3()
+
+		.fullscreen-page.show-bottom.squares-page
+
+			.container.container-page.container-page-square
+				.title-box
+					h1 Организация корпоратива
+					.title Открытые площадки
+						br
+						| Москвы и Подмосковья
+				.select-line.only-d
+					+select-1()
+					+select-2()
+					+select-3()
+					.descr.text-14-grey Всего 41 площадка
+				+btn-FILTER().hide-d
+				.descr.text-14-grey.hide-d Всего 41 площадка
+		.items-wrapper.items-wrapper-section
+			+item-place-1()
+			+item-place-2()
+			+item-place-3()
+			+item-place-4()
+			+item-place-5()
+			+item-place-6()
+			+item-place-7()
+			+item-place-8()
+			+item-place-9()
+			+item-place-10()
+			+item-place-11()
+			+item-place-12()
+
+
+		+section-form()
+
+
+
+
+
+
+
+		+footer()
+		include includes/_custom-includes

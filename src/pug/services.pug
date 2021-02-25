@@ -1,0 +1,123 @@
+- var page_name = 'services';
+
+include includes/_page-includes
+
+
+mixin hidden-box()
+	.hidden-box&attributes(attributes)
+		.section
+			.container
+				.box-title.text-30.c-red MICE
+				.side-box-row
+					.side.side-left
+						div.text-box
+							.title-text.text-24 Набирающее популярность с каждым годом направление в сфере организации деловых и корпоративных мероприятий.
+							.text-16 Мы организуем ваши семинары, конференции, выставки, праздники, деловые поездки и презентации в любом городе страны и в любой точке мира.
+						.img-side-box
+							img.img(src='images/project/4.jpg')
+					.side.side-right
+						div.text-box
+							.text-24 От нас:
+							ul.list
+								li: span.text-16 полный контроль за подготовкой и проведением мероприятия;
+								li: span.text-16 полный спектр услуг в направлении Mice.
+							.text-24 От Mice:
+							ul.list
+								li: span.text-16 поддержание имиджа компании и ее положительного восприятия;
+								li: span.text-16 установления долгосрочных отношений с целевой аудиторией;
+								li: span.text-16 распространении информации о вашем товаре или услуге;
+								li: span.text-16 привлечения внимания к бренду;
+								li: span.text-16 стимулирование продаж;
+								li: span.text-16 мотивация команды;
+								li: span.text-16 развитие кадров.
+						+btn-org-dark()
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		+cursor()
+		+popup-request()
+		+header().header-dark
+		section.section-top
+			.container
+				.title-box
+					h1.hide-m Услуги по организации корпоративных мероприятий
+					h1.only-m Услуги
+					.title Чего мы только не делаем!
+		.filter-wrapper.content-filter-wrapper
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Выставки
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Форумы
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Новый Год
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m День рождения компании
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Корпоративы
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Подбор площадок для мероприятий
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Концерты
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block.active
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m MICE
+						.plus-icon
+				+hidden-box()
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Фестивали
+						.plus-icon
+				+hidden-box().hidden
+			div.filter-block
+				.toggle-line.hover-link
+					.container.flex-a-j
+						.title.text-30-m Юбилеи компании
+						.plus-icon
+				+hidden-box().hidden
+
+		+section-form()
+
+
+
+
+
+
+
+		+footer()
+		include includes/_custom-includes

@@ -1,0 +1,28 @@
+mixin footer()
+	footer
+		a.logo-art.min.hover-link(href=pages.main.url): img.img(src='images/logo-art.svg')
+		ul.hide-m
+			li: a.hover-link(href='#') О компании
+			li: a.hover-link(href=pages.services.url) Услуги
+			li: a.hover-link(href=pages.projects.url) Проекты и клиенты
+			li: a.hover-link(href=pages.team.url) Площадки
+			li: a.hover-link(href=pages.contact.url) Контакты
+		.box-row.row-wide.hide-m
+			div.box
+				.descr-link Контактный телефон
+				a.link.text-24.hover-link(href='tel:+74956173946') +7 (495) 617-39-46
+			div.box
+				.descr-link Адрес офиса
+				a.link.text-24.hover-link(href='#') 141008, г. Мытищи,
+					br
+					| ул. Лётная, стр.19, офис 351
+			div.box
+				.descr-link Вопросы и предложения
+				a.link.text-24.hover-link(href='mailto:info@art-formula.ru') info@art-formula.ru
+				.soc-row
+					a.icon.icon-fb.hover-link(href='#')
+					a.icon.icon-insta.hover-link(href='#')
+		ul.descr-list
+			li: a.descr-link.hover-link(href='#') © А-Р-Т-формула, 2019
+			li: a.descr-link.hover-link(href='#') Соглашение об обработке персональных данных
+			li: a.descr-link.hover-link(href='#') Политика конфиденциальности

@@ -1,0 +1,202 @@
+- var page_name = 'main';
+
+include includes/_page-includes
+
+
+doctype html
+html(lang='ru')
+
+	include includes/_head
+	include includes/_urls
+
+	body
+		.slider_popup_wrapper#slider_popup_wrapper
+			.swiper-container.slider_popup
+				.swiper-wrapper
+					.swiper-slide
+					.swiper-slide
+					.swiper-slide
+		+cursor()
+		+popup-request()
+		+header()
+		.fullscreen-page.main-top-wrapper
+			+video-wrapper-main()
+			.container.container-page
+				.title-box
+					h1 Event-агентство
+					.title-48 Решаем любую event-задачу
+						br.only-t
+						| за адекватные деньги:
+					.swiper-container.phrase_slider
+						.swiper-wrapper
+							.swiper-slide: span.slide-name корпоративное событие
+							.swiper-slide: span.slide-name новогодние корпоративы
+			.fullscreen-footer
+				.container-wide.between-d.client-slider-row
+					div.relative
+						.sub-title постоянные клиенты
+						.swiper-container.client_logo_slider
+							.swiper-wrapper
+
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_1.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_2.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_3.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_4.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_5.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_6.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_7.png')
+								.swiper-slide: img.img(src='images/clients_logo/client_logo_8.png')
+					.btn-row
+						+btn-showreel-load().only-m
+						+btn-showreel().hide-1200-1500.hide-m
+						+btn-presentation().cursor_white.hide-m
+		section.bg-red.section-img-text.bg-svg-red.cursor-bg-white
+			.container
+				.title-main-wrapper
+					span Идеальное
+					br
+					span событие
+				.tag-line-wrapper
+					.tag-line.vertical
+					.row-c-t-d
+						.tag-text.text-36-m Креативность
+						.tag-line
+						.tag-text.text-36-m Эффективность
+						.tag-line
+						.tag-text.text-36-m Качество
+			.container
+				.side-a-d
+					div.img-slider-container
+						.swiper-container.photo_slider
+							.swiper-wrapper
+								.swiper-slide: .side.side-img-slider.flicker-in-1: .img-bg(style='background-image:url(images/example/solo_guitar.jpg)')
+								.swiper-slide: .side.side-img-slider.flicker-in-1: .img-bg(style='background-image:url(images/example/project-main.jpg)')
+								.swiper-slide: .side.side-img-slider.flicker-in-1: .img-bg(style='background-image:url(images/example/min-6.jpg)')
+						.block-descr
+							.title.text-30-m 9 лет
+							.text.text-14-m решаем
+								br.hide-m
+								| event-задачи
+					.side.auto.col-500
+						.content-title.text-24 От масштабных мероприятий федерального уровня до эксклюзивных частных праздников
+						.content-text Вы ставите задачу. Наша команда анализирует её, разрабатывает индивидуальную формулу и решает. Благодаря такому подходу мы сокращаем любые риски, умножаем радость участников и приводим бюджет к общему знаменателю.
+						.content-btn-wrapper
+							+btn-org-1().btn-white
+
+				.side-descr
+		section.bg-svg-grey.section-news
+			.container
+				.title-box
+					.title-descr Свежие события
+					.title-top-content.title-48.c-red Успешно проведено более
+						br.hide-m
+						|   148 мероприятий
+				.table-line-wrapper.only-d
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') Вывезти 70 топ-менеджеров МТС на Камчатку и заставить ловить рыбу, чтобы выжить
+						.descr.text-14-descr МТС
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') День арбуза в Rambler Group
+						.descr.text-14-descr Rambler
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') Шнур, Серебро, 600 человек, 2 дня нон-стоп программа для компании Ситилинк
+						.descr.text-14-descr Ситилинк
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') Кладовщик обогнал директора по персоналу. Тимбилдинг на картингах для Леруа Мерлен
+						.descr.text-14-descr Leroy Merlin
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') Korablik People Awards, Церемония награждения лучших сотрудников
+						.descr.text-14-descr Korablik
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') Prodo New Year 2018
+						.descr.text-14-descr Prodo
+					.table-line
+						a.link.link-custom-30.hover-link.show_popup_title(href='#') S2017. Связной нового поколения
+						.descr.text-14-descr Связной
+		.content-news-container
+			.swiper-container.content_news_img
+				.swiper-wrapper
+					.swiper-slide: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/2.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/3.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/4.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/2.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/1.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/3.jpg)')
+					.swiper-slide: .bg-img(style='background-image:url(images/project/4.jpg)')
+			.swiper-container.content_news_slider
+				.swiper-wrapper
+					.swiper-slide: .content-news-wrapper: .box: +item-news('МТС','Вывезти 70 топ-менеджеров МТС на Камчатку и заставить ловить рыбу, чтобы выжить')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('Korablik','Korablik People Awards, Церемония награждения лучших сотрудников')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('Rambler','День арбуза в Rambler Group')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('Ситилинк','Шнур, Серебро, 600 человек, 2 дня нон-стоп программа для компании Ситилинк')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('МТС','Вывезти 70 топ-менеджеров МТС на Камчатку и заставить ловить рыбу, чтобы выжить')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('Korablik','Korablik People Awards, Церемония награждения лучших сотрудников')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('Rambler','День арбуза в Rambler Group')
+					.swiper-slide: .content-news-wrapper: .box: +item-news('Ситилинк','Шнур, Серебро, 600 человек, 2 дня нон-стоп программа для компании Ситилинк')
+			.control-box
+				.arrow-container
+					+slide-left-news()
+					+slide-right-news()
+					.swiper-pagination.swiper-pagination-news
+		section.section-org.bg-black.bg-svg-dark
+			.swiper-container.org_logo_slider
+				.swiper-wrapper
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_1.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_2.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_3.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_4.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_5.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_6.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_7.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_8.png)')
+					.swiper-slide: .img-box.hover-link: .img(style='background-image:url(images/clients_logo/org_logo_9.png)')
+
+
+
+			.swiper-container.quote_slider
+				mixin quote_slide()
+					.container
+						.side-row
+							.side.col-720
+								.text-30 Хотим подчеркнуть высокий уровень профессионализма, всестороннее содействие специалистам АО «Связной Логистика» в решении организационных вопросов.
+								.side.org-info-box
+									.quotes: img.img(src='images/icons/quotes.png')
+									div
+										.name.text-20 Паршина
+											br
+											| Александра Олеговна
+										.career.text-14 Директор по развитию
+				mixin quote_slide_2()
+					.container
+						.side-row
+							.side.col-720
+								.text-30 Хотим подчеркнуть высокий уровень профессионализма, всестороннее содействие специалистам АО «Связной Логистика» в решении организационных вопросов. Хотим подчеркнуть высокий уровень профессионализма, всестороннее содействие специалистам АО «Связной Логистика» в решении организационных вопросов.
+								.side.org-info-box
+									.quotes: img.img(src='images/icons/quotes.png')
+									div
+										.name.text-20 Паршина
+											br
+											| Александра Олеговна
+										.career.text-14 Директор по развитию
+				.swiper-wrapper
+					.swiper-slide: +quote_slide()
+					.swiper-slide: +quote_slide_2()
+					.swiper-slide: +quote_slide()
+					.swiper-slide: +quote_slide()
+					.swiper-slide: +quote_slide_2()
+					.swiper-slide: +quote_slide()
+					.swiper-slide: +quote_slide()
+					.swiper-slide: +quote_slide()
+					.swiper-slide: +quote_slide()
+			.container
+				.btn-row.slider-btn-row
+					+btn-org-1()
+					+btn-org-2().white-m.cursor_white.only-d
+					+btn-org-3().white-m.hide-d
+		+section-form()
+
+
+
+		+footer()
+		include includes/_custom-includes
